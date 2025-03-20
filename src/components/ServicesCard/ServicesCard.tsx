@@ -1,5 +1,6 @@
 import s from './ServicesCard.module.scss';
 import { useState } from 'react';
+import Button from '../Button/Button';
 
 interface IServicesCardProps {
 	index: number;
@@ -30,7 +31,7 @@ export default function ServicesCard({
 				<div className={s.overlay}>
 					{title && <h3 className={s.title}>{title}</h3>}
 					{subtitle && <p className={s.subtitle}>{subtitle}</p>}
-					{buttonText && <button className={s.btn}>{buttonText}</button>}
+					{buttonText && <Button>{buttonText}</Button>}
 				</div>
 			)}
 		</div>

@@ -1,0 +1,25 @@
+@use "@scss/base/variables" as *;
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: $font-sm;
+  font-weight: $font-medium;
+  color: $white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.5s, color 0.5s;
+  
+  &.sm {
+    padding: $spacing-xs $spacing-sm;
+  }
+
+  &.primary {
+    background-color: $color-primary;
+    
+    &:hover {
+      background-color: darken($color-primary, 10%);
+    }
+  }
+}
