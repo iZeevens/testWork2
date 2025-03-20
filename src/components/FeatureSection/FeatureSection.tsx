@@ -10,7 +10,7 @@ export default function HeroSection() {
 				<h3 className={s.title}>Инновационные решения для вашего бизнеса</h3>
 				<div className={s.flex}>
 					{featureData.map((feature) => (
-						<FeatureCard icon="bla bla" {...feature} />
+						<FeatureCard {...feature} />
 					))}
 				</div>
 			</div>

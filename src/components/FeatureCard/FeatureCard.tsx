@@ -17,11 +17,14 @@ export default function FeatureCard({
 }: IServiceCardProps) {
 	return (
 		<div className={s.card}>
-			{/* <div className={s.icon}>{icon}</div> */}
+			<div className={s.icon}>{icon}</div>
 			<h3 className={s.title}>{title}</h3>
 			<p className={s.description}>{description}</p>
 			<div className={s.footer}>
-				<span className={s.rating}> {rating}</span>
+				<div className={s.rating}>
+					<span className={s.ratingStar}>★</span>
+					<span className={s.ratingText}> {rating}</span>
+				</div>
 				<span className={s.category}>{category}</span>
 			</div>
 		</div>

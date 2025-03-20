@@ -19,12 +19,14 @@
   .subtitle {
     font-size: $font-md;
     font-weight: $font-regular;
+    text-align: center;
   }
 
   .grid {
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    justify-items: center;
+    grid-template-columns: repeat(auto-fill, minmax(clamp(340px, 100%, 371px), 1fr));
     gap: 20px;
   }
 }

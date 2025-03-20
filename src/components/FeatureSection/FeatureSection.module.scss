@@ -14,11 +14,14 @@
   .title {
     font-size: $font-xl;
     font-weight: $font-bold;
-    margin-bottom: 30px;
+    margin-bottom: 70px;
+    text-align: center;
   }
 
   .flex {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 22px;
   }
 }

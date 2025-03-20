@@ -33,4 +33,10 @@
     }
 
   }
+
+  @media (max-width: $breakpoint-tablet) {
+    overflow-x: scroll;
+    white-space: nowrap;
+    scrollbar-width: none; 
+  }
 }
