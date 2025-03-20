@@ -1,21 +1,30 @@
 @use "@scss/base/variables" as *;
 
 .nav {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 35px;
-  height: 50px;
   width: 100%;
   border-bottom: 1px solid $color-gray;
 
+  ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 35px;
+    height: 50px;
+    padding: 0;
+
+    @media (max-width: 528px) {
+      overflow-x: scroll;
+      scrollbar-width: none;
+      justify-content: left;
+    }
+  }
 
   li {
     font-size: $font-md;
     font-weight: $font-bold;
     color: $color-gray-dark;
     list-style: none;
-  
+    white-space: nowrap;
   }
 
   .active {
@@ -32,12 +41,5 @@
       background-color: $color-primary;
     }
 
-  }
-
-  @media (max-width: 528px) {
-    overflow-x: scroll;
-    white-space: nowrap;
-    scrollbar-width: none;
-    justify-content: left;
   }
 }

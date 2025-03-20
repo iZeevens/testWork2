@@ -20,9 +20,11 @@
   }
 
   .navList {
-    display: flex;
-    align-items: center;
-    gap: 20px;
+    ul {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
 
     li {
       font-size: $font-md;

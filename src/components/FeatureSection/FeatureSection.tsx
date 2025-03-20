@@ -3,9 +3,9 @@ import clsx from 'clsx';
 import { featureData } from '@/assets/data/example';
 import FeatureCard from '../FeatureCard/FeatureCard';
 
-export default function HeroSection() {
+export default function FeatureSection() {
 	return (
-		<section className={s.hero}>
+		<section className={s.feature}>
 			<div className={clsx('container', s.container)}>
 				<h3 className={s.title}>Инновационные решения для вашего бизнеса</h3>
 				<div className={s.flex}>

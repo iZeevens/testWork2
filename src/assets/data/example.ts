@@ -64,4 +64,12 @@ const servicesData = [
 	},
 ];
 
-export { featureData, servicesData };
+const navLinks = [
+	{ path: '/', label: 'Главная' },
+	{ path: '/about', label: 'О нас' },
+	{ path: '/services', label: 'Услуги' },
+	{ path: '/portfolio', label: 'Портфолио' },
+	{ path: '/contacts', label: 'Контакты' },
+];
+
+export { featureData, servicesData, navLinks };

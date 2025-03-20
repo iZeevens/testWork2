@@ -16,7 +16,10 @@ export default function FeatureCard({
 	category,
 }: IServiceCardProps) {
 	return (
-		<div className={s.card}>
+		<div
+			className={s.card}
+			aria-label={`Карточка услуги: ${title}, категория ${category}, рейтинг ${rating}`}
+		>
 			<div className={s.icon}>{icon}</div>
 			<h3 className={s.title}>{title}</h3>
 			<p className={s.description}>{description}</p>

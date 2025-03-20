@@ -27,6 +27,7 @@ export default function ServicesCard({
 	return (
 		<div
 			className={`${s.card} ${highlighted ? s.highlighted : ''}`}
+			aria-label={`Проект ${index + 1}${title ? `: ${title}` : ''}`}
 			onMouseEnter={() => setHovered(true)}
 			onMouseLeave={() => setHovered(false)}
 			onTouchStart={handleTouch}
@@ -34,13 +35,11 @@ export default function ServicesCard({
 		>
 			<span className={s.index}>Проект {index + 1}</span>
 
-			{hovered && (
-				<div className={s.overlay}>
-					{title && <h3 className={s.title}>{title}</h3>}
-					{subtitle && <p className={s.subtitle}>{subtitle}</p>}
-					{buttonText && <Button>{buttonText}</Button>}
-				</div>
-			)}
+			<div className={`${s.overlay} ${hovered ? s.visible : ''}`}>
+				{title && <h3 className={s.title}>{title}</h3>}
+				{subtitle && <p className={s.subtitle}>{subtitle}</p>}
+				{buttonText && <Button>{buttonText}</Button>}
+			</div>
 		</div>
 	);
 }
