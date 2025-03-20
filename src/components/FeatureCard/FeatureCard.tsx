@@ -26,7 +26,7 @@ export default function FeatureCard({
 			<div className={s.footer}>
 				<div className={s.rating}>
 					<span className={s.ratingStar}>★</span>
-					<span className={s.ratingText}> {rating}</span>
+					<span className={s.ratingText}>{rating}</span>
 				</div>
 				<span className={s.category}>{category}</span>
 			</div>
