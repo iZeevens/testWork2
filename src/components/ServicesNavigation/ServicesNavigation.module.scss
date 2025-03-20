@@ -1,0 +1,36 @@
+@use "@scss/base/variables" as *;
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 35px;
+  height: 50px;
+  width: 100%;
+  border-bottom: 1px solid $color-gray;
+
+
+  li {
+    font-size: $font-md;
+    font-weight: $font-bold;
+    color: $color-gray-dark;
+    list-style: none;
+  
+  }
+
+  .active {
+    color: $color-primary;
+    position: relative;
+    
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -17px;
+      width: 100%;
+      height: 2px;
+      background-color: $color-primary;
+    }
+
+  }
+}

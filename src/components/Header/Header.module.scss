@@ -1,0 +1,52 @@
+@use "@scss/base/variables" as *;
+
+.head {
+  display: flex;
+  justify-content: space-between;
+  background-color: $color-dark;
+  min-height: 50px;
+  box-shadow: $shadow-sm;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    font-size: $font-lg;
+    font-weight: $font-bold;
+    color: $color-light;
+  }
+
+  .navList {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    li {
+      font-size: $font-md;
+      font-weight: $font-regular;
+      list-style: none;
+      color: $color-light;
+      cursor: pointer;
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: -13px;
+        width: 0;
+        height: 2px;
+        background-color: $color-accent;
+        transition: width 0.3s ease, left 0.3s ease;
+      }
+  
+      &:hover::after {
+        width: 100%;
+        left: 0;
+      }
+    }
+  }
+}

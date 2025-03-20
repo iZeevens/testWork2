@@ -1,0 +1,49 @@
+@use "@scss/base/variables" as *;
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 370px;
+  padding: 20px;
+  text-align: center;
+  background-color: $white;
+  box-shadow: $shadow-md;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+
+  &:hover {
+    box-shadow: $shadow-lg;
+  }
+
+  .title {
+    font-size: $font-lg;
+    font-weight: $font-bold;
+    margin-top: 27px;
+    margin-bottom: 12px;
+  }
+
+  .description {
+    font-size: $font-sm;
+    font-weight: $font-regular;
+    margin-bottom: 22px;
+  }
+
+  .footer {
+    display: flex;
+    justify-content: space-between;
+
+    .rating {
+      color: $color-gray-dark;
+      font-size: $font-md;
+      font-weight: $font-medium;
+    }
+
+    .category {
+      color: $color-dark;
+      font-size: $font-xs;
+      font-weight: $font-medium;
+      background-color: $color-gray;
+      padding: $spacing-xs $spacing-sm;
+    }
+  }
+}

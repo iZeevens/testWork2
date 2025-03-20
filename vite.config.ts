@@ -80,6 +80,7 @@ export default defineConfig(({ mode }) => {
 			alias: {
 				'@': path.resolve(__dirname, './src'),
 				'@assets': path.resolve(__dirname, './src/assets'),
+				'@scss': path.resolve(__dirname, './src/assets/scss'),
 				'@components': path.resolve(__dirname, './src/components'),
 				'@layouts': path.resolve(__dirname, './src/layouts'),
 				'@pages': path.resolve(__dirname, './src/pages'),
