@@ -19,11 +19,18 @@ export default function ServicesCard({
 }: IServicesCardProps) {
 	const [hovered, setHovered] = useState(false);
 
+	const handleTouch = () => {
+		setHovered(true);
+		setTimeout(() => setHovered(false), 3000);
+	};
+
 	return (
 		<div
 			className={`${s.card} ${highlighted ? s.highlighted : ''}`}
 			onMouseEnter={() => setHovered(true)}
 			onMouseLeave={() => setHovered(false)}
+			onTouchStart={handleTouch}
+			onTouchEnd={(e) => e.stopPropagation()}
 		>
 			<span className={s.index}>Проект {index + 1}</span>
 
